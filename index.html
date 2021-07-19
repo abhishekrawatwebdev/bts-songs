@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="./icons/836683.jpg" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>BTS-music</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1>&#128156; BTS &#128156;</h1>
+      <div class="modal">
+        <div class="name"><h1 id="name">name of the song</h1></div>
+        <div class="image">
+          <img
+            src=" "
+            alt="image of song"
+            id="image"
+            style="height: 200px; width: 200px; border-radius: 50%"
+          />
+        </div>
+
+        <div class="funbut">
+          <ul>
+            <li>
+              <button id="prev">
+                <img src="./icons/prev.png" alt="" height="25px" />
+              </button>
+            </li>
+            <li>
+              <button class="play" id="playpause">
+                <img src="./icons/play.png" alt="" height="30px" id="both" />
+              </button>
+            </li>
+            <li>
+              <button id="next">
+                <img src="./icons/next.png" alt="" height="23px" />
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <audio id="song" src=" "></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

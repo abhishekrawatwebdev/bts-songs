@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Yomogi", cursive;
+}
+.main {
+  background-color: rgb(254, 218, 255);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.modal {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 20px 20px 40px;
+  height: 60vh;
+  width: 60vw;
+  border-radius: 20px;
+  border-top: 0.5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.image {
+  background-color: turquoise;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 36vh;
+}
+#image {
+  animation: round 5s infinite linear;
+}
+
+@keyframes round {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.modal h1 {
+  color: rgb(221, 92, 253);
+  height: 7vh;
+}
+.funbut {
+  width: auto;
+  position: absolute;
+  top: 70vh;
+  left: 19vw;
+}
+.funbut ul {
+  display: flex;
+  list-style-type: none;
+}
+.funbut ul li:nth-child(2) {
+  background-color: rgb(213, 124, 240);
+}
+.funbut ul li {
+  padding: 2.5vh;
+  transition: 0.3s all ease-in-out;
+  border-radius: 50%;
+}
+.funbut ul li:hover {
+  background-color: rgb(200, 88, 235);
+}
+#prev {
+  height: 45px;
+  width: 45px;
+  /* background-image: url("../icons/prev.png"); */
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  /* background-color: black; */
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+#playpause {
+  height: 45px;
+  width: 45px;
+  /* background-image: url("../icons/play.png"); */
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  background-color: rgb(213, 124, 240);
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+#next {
+  height: 45px;
+  width: 45px;
+  /* background-image: url("../icons/next.png"); */
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  /* background-color: black; */
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.name {
+  height: 7vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  position: absolute;
+  top: 24vh;
+  width: 56vw;
+}
