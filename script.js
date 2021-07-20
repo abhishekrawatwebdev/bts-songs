@@ -134,7 +134,11 @@ let playBtn = document.getElementById("playpause");
 let nextBtn = document.getElementById("next");
 let songIndex = 0;
 let playPause = document.getElementById("both");
+let Duration = document.getElementById("duration");
+let curtime = document.getElementById("curtime");
+let slider = document.getElementById("slider");
 let isPlaying = false;
+let Case = document.querySelector(".case");
 
 const loadMusic = () => {
     image.src = data[songIndex].image;
@@ -167,19 +171,53 @@ playBtn.addEventListener('click', () => {
 });
 nextBtn.addEventListener('click', () => {
     songIndex = (songIndex + 1) % data.length;
-    // image.src = data[songIndex].image;
-    // audio.src = data[songIndex].src;
-    // Name.innerHTML = data[songIndex].name;
+    nextBtn.style.backgroundColor = "white";
     loadMusic();
     playMusic();
 
 });
 prevBtn.addEventListener('click', () => {
     songIndex = (songIndex - 1 + data.length) % data.length;
-    // image.src = data[songIndex].image;
-    // audio.src = data[songIndex].src;
-    // Name.innerHTML = data[songIndex].name;
+    prevBtn.style.backgroundColor = "white";
     loadMusic();
     playMusic();
 
+});
+audio.addEventListener('timeupdate', (event) => {
+    // console.log(e);
+    let { currentTime, duration } = event.srcElement;
+    // console.log(Math.round(currentTime));
+    let curminutes = Math.floor(currentTime / 60);
+    let cursec = Math.floor(currentTime % 60);
+    let lastminutes = Math.floor(duration / 60);
+    let lastsec = Math.floor(duration % 60);
+    if (cursec < 10) {
+        curtime.textContent = `0${curminutes}:0${cursec}`;
+    }
+    else {
+        curtime.textContent = `${curminutes}:${cursec}`;
+    }
+    if (duration) {
+        if (lastsec < 10) {
+            Duration.textContent = `0${lastminutes}:0${lastsec}`;
+        }
+        else {
+            Duration.textContent = `0${lastminutes}:${lastsec}`;
+        }
+    }
+    if (currentTime == duration) {
+        songIndex = (songIndex + 1) % data.length;
+        nextBtn.style.backgroundColor = "white";
+        loadMusic();
+        playMusic();
+    }
+
+
+    slider.style.width = `${(currentTime / duration) * 100}%`
+
+});
+Case.addEventListener('click', (e) => {
+    const { duration } = audio;
+    let move = (e.offsetX / e.srcElement.clientWidth) * duration
+    audio.currentTime = move;
 });
