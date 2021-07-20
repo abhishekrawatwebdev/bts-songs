@@ -1,7 +1,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Yomogi", cursive;
+  font-family: cursive;
 }
 .main {
   background-color: rgb(254, 218, 255);
@@ -14,8 +14,8 @@
 .modal {
   background-color: rgb(255, 255, 255);
   box-shadow: 20px 20px 40px;
-  height: 60vh;
-  width: 60vw;
+  height: 75vh;
+  width: 80vw;
   border-radius: 20px;
   border-top: 0.5px solid white;
   display: flex;
@@ -50,8 +50,8 @@
 .funbut {
   width: auto;
   position: absolute;
-  top: 70vh;
-  left: 19vw;
+  top: 79vh;
+  left: 24vw;
 }
 .funbut ul {
   display: flex;
@@ -61,12 +61,12 @@
   background-color: rgb(213, 124, 240);
 }
 .funbut ul li {
-  padding: 2.5vh;
+  padding: 1.5vh;
   transition: 0.3s all ease-in-out;
   border-radius: 50%;
 }
 .funbut ul li:hover {
-  background-color: rgb(200, 88, 235);
+  background-color: rgb(213, 124, 240);
 }
 #prev {
   height: 45px;
@@ -115,4 +115,33 @@
   position: absolute;
   top: 24vh;
   width: 56vw;
+}
+.sliderdiv {
+  /* background-color: aqua; */
+  position: relative;
+  top: 121px;
+  width: 268px;
+}
+.case {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.5),
+    0px 4px 8px rgba(0, 0, 0, 0.5), 0px 8px 16px rgba(0, 0, 0, 0.5),
+    0px 16px 32px rgba(0, 0, 0, 0.5), 0px 32px 64px rgba(0, 0, 0, 0.5);
+  height: 1vh;
+  border-radius: 2vh;
+  width: 100%;
+}
+#slider {
+  position: absolute;
+  background-color: rgb(213, 124, 240);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5), 0px 2px 4px rgba(0, 0, 0, 0.5),
+    0px 4px 8px rgba(0, 0, 0, 0.5), 0px 8px 16px rgba(0, 0, 0, 0.5),
+    0px 16px 32px rgba(0, 0, 0, 0.5), 0px 32px 64px rgba(0, 0, 0, 0.5);
+  height: 1vh;
+  border-radius: 2vh;
+  transition: width 0.3s linear;
+  width: 0%;
+}
+.time {
+  display: flex;
+  justify-content: space-between;
 }
