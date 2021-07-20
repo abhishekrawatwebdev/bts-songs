@@ -129,6 +129,7 @@
   height: 1vh;
   border-radius: 2vh;
   width: 100%;
+  cursor:pionter;
 }
 #slider {
   position: absolute;
